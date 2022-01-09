@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .container {
+        background-color: powderblue;
+        height: 200px;
+        display: flex;
+        flex-direction: row;
+        /* flex 를 하기 위해서는 밖의 컨데이너의 하이트를 높게 보여주면 차이가 나타남 */
+      }
+      .item {
+        background-color: tomato;
+        color: white;
+        border: 1px solid white;
+      }
+      .item:nth-child(2) {
+        flex-basis: 300px;
+        flex-shrink: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <!-- 클래스 에 컨데이너가 안들어가도됨 아이템도 단지 부모와 자식이 필요함 -->
+    </div>
+  </body>
+</html>
